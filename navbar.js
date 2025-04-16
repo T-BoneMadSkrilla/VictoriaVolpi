@@ -175,7 +175,7 @@ function createNavbar() {
       <div class="nav-content">
         <!-- Left navigation -->
         <div class="nav-left">
-          <a href="/nursing-guides" class="nav-link">Nursing Guides</a>
+          <a href="/VictoriaVolpi/nursing-guides" class="nav-link">Nursing Guides</a>
         </div>
 
         <!-- Center logo and name -->
@@ -189,7 +189,7 @@ function createNavbar() {
 
         <!-- Right navigation -->
         <div class="nav-right">
-          <a href="/legal-nurse" class="nav-link">Legal Nurse Consulting</a>
+          <a href="/VictoriaVolpi/legal-nurse" class="nav-link">Legal Nurse Consulting</a>
         </div>
 
         <!-- Mobile menu button -->
@@ -205,8 +205,8 @@ function createNavbar() {
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="/nursing-guides">Nursing Guides</a>
-      <a href="/legal-nurse">Legal Nurse Consulting</a>
+      <a href="/VictoriaVolpi/nursing-guides">Nursing Guides</a>
+      <a href="/VictoriaVolpi/legal-nurse">Legal Nurse Consulting</a>
     </div>
   `;
   
