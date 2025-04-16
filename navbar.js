@@ -36,7 +36,7 @@ function createNavbarStyles() {
     .nav-right {
       display: flex;
       justify-content: flex-end;
-      margin-top: 1px;
+      margin-top: 10px;
     }
 
     .nav-center {
