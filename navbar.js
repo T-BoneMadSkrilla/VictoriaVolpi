@@ -180,7 +180,7 @@ function createNavbar() {
 
         <!-- Center logo and name -->
         <div class="nav-center">
-          <a href="/" class="logo-container">
+          <a href="/VictoriaVolpi/" class="logo-container">
             <div class="logo-initials">V V</div>
             <div class="logo-name">Victoria Volpi</div>
             <div class="logo-subtitle">Legal Nurse Consultant</div>
