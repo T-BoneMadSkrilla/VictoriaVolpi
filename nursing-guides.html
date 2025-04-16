@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nursing Guides - Victoria Volpi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .page-title {
+      font-family: 'Trajan Pro', 'Times New Roman', serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .page-subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .intro-section {
+      max-width: 900px;
+      margin: 0 auto 80px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Trajan Pro', 'Times New Roman', serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 30px;
+      color: #333;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: #777;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .quote-block {
+      background-color: #f2f2f2;
+      border-left: 4px solid #777;
+      padding: 25px 30px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    .quote-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .quote-author {
+      font-size: 1rem;
+      text-align: right;
+      font-style: normal;
+      color: #777;
+    }
+
+    .guides-section {
+      margin-bottom: 80px;
+    }
+
+    .guides-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .guide-category {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .guide-category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-title {
+      font-family: 'Trajan Pro', 'Times New Roman', serif;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: #333;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .guide-list {
+      list-style-type: none;
+    }
+
+    .guide-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #eee;
+    }
+
+    .guide-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .guide-link {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      padding: 10px 0;
+    }
+
+    .guide-link:hover {
+      color: #777;
+    }
+
+    .guide-link::before {
+      content: "→ ";
+      color: #777;
+      margin-right: 5px;
+    }
+
+    .guide-description {
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: 5px;
+      margin-left: 18px;
+    }
+
+    .cta-section {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+      padding: 50px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .cta-title {
+      font-family: 'Trajan Pro', 'Times New Roman', serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .cta-text {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      font-family: 'Times New Roman', serif;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .guides-categories {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .guide-category {
+        width: 100%;
+      }
+      
+      .cta-section {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+  <script src="navbar.js"></script>
+</head>
+<body>
+  <div class="container">
+    <section class="intro-section">
+      <p class="intro-text">
+        The journey from nursing student to confident practitioner is filled with challenges that aren't always addressed in traditional education. Throughout my years as a registered nurse, I've witnessed countless new graduates struggle with the gap between classroom theory and bedside reality.
+      </p>
+      <p class="intro-text">
+        These guides are born from my passion for nursing education and mentorship. I believe that by sharing practical knowledge, clinical insights, and hard-won wisdom, we can better prepare the next generation of nurses to provide exceptional patient care while maintaining their own wellbeing.
+      </p>
+      
+      <div class="quote-block">
+        <p class="quote-text">
+          "I create these guides because I remember what it felt like to be overwhelmed as a new nurse. Having a trusted resource to turn to can make all the difference between struggling and thriving in those crucial first years of practice."
+        </p>
+        <p class="quote-author">— Victoria Volpi, RN</p>
+      </div>
+      
+      <p class="intro-text">
+        Each guide is meticulously crafted to address the real challenges nurses face daily, from mastering clinical skills to navigating workplace dynamics. My goal is to provide you with practical, evidence-based resources that build confidence and competence throughout your nursing journey.
+      </p>
+    </section>
+
+    <section class="guides-section">
+      <h2 class="section-title">Explore Our Nursing Guides</h2>
+      <div class="guides-categories">
+        <div class="guide-category">
+          <h3 class="category-title">Clinical Skills & Competencies</h3>
+          <ul class="guide-list">
+            <li class="guide-item">
+              <a href="/guides/iv-therapy-essentials" class="guide-link">IV Therapy Essentials</a>
+              <p class="guide-description">Master the fundamentals of IV insertion, maintenance, and troubleshooting with confidence.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/medication-administration" class="guide-link">Medication Administration Mastery</a>
+              <p class="guide-description">Learn critical safety protocols and practical tips for error-free medication delivery.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/vital-signs-interpretation" class="guide-link">Vital Signs: Beyond the Numbers</a>
+              <p class="guide-description">Interpret vital sign changes and understand their clinical significance in various situations.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="guide-category">
+          <h3 class="category-title">Professional Development</h3>
+          <ul class="guide-list">
+            <li class="guide-item">
+              <a href="/guides/time-management" class="guide-link">Time Management for Nurses</a>
+              <p class="guide-description">Practical strategies to prioritize care, manage multiple patients, and complete tasks efficiently.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/communication-skills" class="guide-link">Effective Communication in Healthcare</a>
+              <p class="guide-description">Build skills for clear communication with patients, families, and the healthcare team.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/documentation-best-practices" class="guide-link">Documentation Best Practices</a>
+              <p class="guide-description">Learn the essentials of thorough, accurate, and legally sound clinical documentation.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/nursing-specialties" class="guide-link">Exploring Nursing Specialties</a>
+              <p class="guide-description">Guide to various nursing specialties, certification requirements, and career pathways.</p>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="guide-category">
+          <h3 class="category-title">Self-Care & Resilience</h3>
+          <ul class="guide-list">
+            <li class="guide-item">
+              <a href="/guides/preventing-burnout" class="guide-link">Preventing Nurse Burnout</a>
+              <p class="guide-description">Recognize the signs of burnout and implement effective prevention strategies.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/shift-work-wellbeing" class="guide-link">Thriving in Shift Work</a>
+              <p class="guide-description">Maintain physical and mental wellbeing while working rotating or night shifts.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/compassion-fatigue" class="guide-link">Managing Compassion Fatigue</a>
+              <p class="guide-description">Practical tools to maintain empathy while protecting your emotional health.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/self-care-practices" class="guide-link">Self-Care for Healthcare Professionals</a>
+              <p class="guide-description">Sustainable self-care routines that fit into a busy nursing schedule.</p>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="guide-category">
+          <h3 class="category-title">Students &  New Grads</h3>
+          <ul class="guide-list">
+            <li class="guide-item">
+              <a href="/guides/you-belong-here" class="guide-link">You Belong Here</a>
+              <p class="guide-description">Month-by-month guidance to navigate your critical first year in nursing.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/preceptorship-tips" class="guide-link">Making the Most of Preceptorship</a>
+              <p class="guide-description">How to build a positive relationship with your preceptor and maximize learning.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/confidence-building" class="guide-link">Building Clinical Confidence</a>
+              <p class="guide-description">Practical exercises and mindset shifts to develop nursing confidence.</p>
+            </li>
+            <li class="guide-item">
+              <a href="/guides/mistake-recovery" class="guide-link">Recovering from Mistakes</a>
+              <p class="guide-description">How to appropriately handle, report, and learn from nursing errors.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
